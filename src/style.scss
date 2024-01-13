@@ -82,6 +82,15 @@ a {
 #mainContent {
   transition: opacity 1s ease-out;
 }
+.fa-bars {
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+
+  visibility: hidden;
+  
+  margin-right: 30px;
+}
 
 
 
@@ -316,7 +325,7 @@ nav {
   z-index: 5;
 
   padding: 0 0 5px 5px;
-  margin-top: 0px;
+  margin-top: 15px;
   margin-left: 170px;
   border-radius: calc(var(--rounded-corners-n-blur) * 1.5);
 
@@ -324,15 +333,15 @@ nav {
   max-height: 0;
   overflow: hidden;
 
-  transition: all .5s cubic-bezier(0.5, 0, 0.2, 1) .2s;
+  transition: all .5s cubic-bezier(0.5, 0, 0.2, 1);
 }
 .dropdown-content a {
   display: block;
 }
 .show {
   opacity: 1;
-  max-height: 150px;
-  margin-top: 15px;
+  max-height: 400px;
+  // margin-top: 15px;
 }
 
 
@@ -367,6 +376,9 @@ nav {
 }
 .solid-cover main {
   width: 380px; 
+
+  margin: 0 20px;
+  white-space: nowrap;
   
   h1, h2, button {
     visibility: hidden;
@@ -607,14 +619,73 @@ section {
   bottom: 20px;
   right: 20px;
 }
-// #stickyDiv {
-//   position: relative;
-//   top: 0;
-// }
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+// MEDIA QUERIES
+
+$breakpoint-tablet: 376px;
+
+@media (max-width: $breakpoint-tablet) {
+  nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    background-color: var(--accent-darkgray);
+    border-radius: var(--rounded-corners-n-blur);
+
+    padding: 0 0 5px 5px;
+    margin: 70px 10px 0 0;
+    
+    // BY DEFAULT, ELEMENT IS HIDDEN
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    
+    // TRANSITION OPENING & CLOSING
+    transition: all .3s cubic-bezier(0.5, 0, 0.2, 1);
+
+    a {
+      display: block;
+    }
+    .dropdown-content {
+      position: relative;
+      
+      margin: 0;
+    }
+  }
+  .fa-bars {
+    visibility: visible;
+  }
+  
+  .solid-cover {
+    main {
+      h1, h2 {
+        text-align: center;
+        white-space: normal;
+      }
+      button {
+        display: block;
+        margin: 0 auto;
+      }
+    }
+  }
+}
 
 
 

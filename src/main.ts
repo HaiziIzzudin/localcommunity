@@ -17,7 +17,9 @@ class customHeader extends HTMLElement {
         <header class="flex-centerize">
             
         <img src="https://anydayguide.com/uploads/events/holidays/commemorates/kedah.png">
-    
+        
+        <i class="fa-solid fa-bars"></i>
+
         <nav>
                 
         <a href="index.html">Home</a>
@@ -56,6 +58,9 @@ customElements.define ('custom-header', customHeader)
 
 let isMouseOverDropdownButton = false;
 
+let menuBtn = document.querySelector('.fa-bars') as HTMLElement;
+let navExpand = document.querySelector('nav');
+
 let dropdownButton = document.querySelector('.dropdown-button');
 
 let myQuerySelector = document.querySelector('.dropdown-content');
@@ -66,23 +71,51 @@ dropdownButton?.addEventListener('mouseover', () => {
     console.log(isMouseOverDropdownButton)
     myQuerySelector?.classList.add('show');
 });
+dropdownButton?.addEventListener('mouseout', () => {
+    isMouseOverDropdownButton = false;
+    console.log(isMouseOverDropdownButton)
+    myQuerySelector?.classList.remove('show');
+});
+dropdownButton?.addEventListener('click', () => {
+    if (myQuerySelector?.classList.contains('show')) {
+        console.log('Contains show. Removing...');
+        myQuerySelector?.classList.remove('show');
+    } else {
+        console.log("Don't have show class. Adding...");
+        myQuerySelector?.classList.add('show');
+    }
+});
+
+
+
+
 myQuerySelector?.addEventListener('mouseover', () => {
     isMouseOverDropdownButton = true;
     console.log(isMouseOverDropdownButton)
     myQuerySelector?.classList.add('show');
 });
 
-dropdownButton?.addEventListener('mouseout', () => {
-    isMouseOverDropdownButton = false;
-    console.log(isMouseOverDropdownButton)
-    myQuerySelector?.classList.remove('show');
-});
 
 myQuerySelector?.addEventListener('mouseout', () => {
     isMouseOverDropdownButton = false;
     console.log(isMouseOverDropdownButton)
     myQuerySelector?.classList.remove('show');
 });
+
+
+
+menuBtn?.addEventListener('click', () => {
+    
+    if (navExpand?.classList.contains('show')) {
+        navExpand?.classList.remove('show');
+    } else {
+        navExpand?.classList.add('show');
+    }
+});
+
+
+
+
 
 
 
