@@ -17,7 +17,7 @@
     
         <header class="flex-centerize">
             
-        <img src="src/images/logo-kedah.png">
+        <img src="src/logo-kedah.png">
     
         <nav>
                 
