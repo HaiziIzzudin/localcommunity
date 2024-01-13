@@ -3,8 +3,6 @@ import $ from 'jquery';
 
 
 
-
-
 // THE CONTENT OF NAVBAR HAD TO BE DONE REVERSELY DUE TO UNKNOWN REASONS
 
 
