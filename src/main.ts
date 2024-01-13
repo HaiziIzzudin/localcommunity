@@ -3,8 +3,7 @@ import $ from 'jquery';
 
 
 
-// THE CONTENT OF NAVBAR HAD TO BE DONE REVERSELY DUE TO UNKNOWN REASONS
-
+// THE CONTENT OF NAVBAR
 
 class customHeader extends HTMLElement {
     connectedCallback() {
@@ -78,8 +77,9 @@ dropdownButton?.addEventListener('mouseout', () => {
 });
 dropdownButton?.addEventListener('click', () => {
     if (myQuerySelector?.classList.contains('show')) {
-        console.log('Contains show. Removing...');
+        console.log('Contains show. Removing and readding...');
         myQuerySelector?.classList.remove('show');
+        myQuerySelector?.classList.add('show');
     } else {
         console.log("Don't have show class. Adding...");
         myQuerySelector?.classList.add('show');

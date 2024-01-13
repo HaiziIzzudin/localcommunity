@@ -67,7 +67,7 @@ a {
   text-decoration: none;
 }
 .main-marginTOP {
-  width: 1024px;
+  max-width: 1024px;
   
   margin: 100px auto;
 }
@@ -684,6 +684,15 @@ $breakpoint-tablet: 850px;
         margin: 0 auto;
       }
     }
+  }
+
+  image-album, food-album { 
+    grid-template-columns: 1fr !important; 
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  .food-images {
+    margin: 0 auto;
   }
 }
 
