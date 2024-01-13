@@ -246,36 +246,11 @@ customElements.define ('food-album', foodAlbum);
 // SMOOTH SCROLLING OFFSET
 
 $('a[href*="#"]').on('click', function(e) {
-e.preventDefault();
-
-$('html, body').animate( {
-    scrollTop: $($(this).attr('href')).offset().top - 80, // Offset value
-}, 500, 'linear');
+    e.preventDefault();
+    const href = $(this).attr('href');
+    if (href) {
+        $('html, body').animate({
+           scrollTop: $(href).offset()!.top - 80, // Offset value
+        }, 500, 'linear');
+    }
 });
-
-
-
-
-
-
-
-
-
-
-
-
-// STICKY DIV
-
-// window.onscroll = function() {myFunction()};
-
-// var stickyDiv = document.getElementById("stickyDiv");
-// var stickyOffset = stickyDiv!.offsetTop;
-
-// function myFunction() {
-//     if (window.pageYOffset > stickyOffset) {
-//         stickyDiv!.style.position = "fixed";
-//         stickyDiv!.style.top = "0";
-//     } else {
-//         stickyDiv!.style.position = "";
-//     }
-// }
