@@ -16,7 +16,7 @@ class customHeader extends HTMLElement {
     
         <header class="flex-centerize">
             
-        <img src="`+ './logo-kedah.png' +`">
+        <img src="https://anydayguide.com/uploads/events/holidays/commemorates/kedah.png">
     
         <nav>
                 
@@ -128,12 +128,12 @@ class imageAlbum extends HTMLElement {
     connectedCallback() {
 
         let attractions: any[] = [
-            ['padi.jpg',   'Tempat 1', 'Description tempat 1'],
-            ['lake.jpg',   'Tempat 2', 'Description tempat 2'],
-            ['telaga.jpg', 'Tempat 3', 'Description tempat 3'],
-            ['lake.jpg',   'Tempat 2', 'Description tempat 2'],
-            ['telaga.jpg', 'Tempat 3', 'Description tempat 3'],
-            ['logo-kedah.png', 'Tempat 4', 'Description tempat 4'],
+            ['https://raw.githubusercontent.com/HaiziIzzudin/localcommunity/main/src/padi.jpg',   'Kedai 1', 'Description kedai 1'],
+            ['https://raw.githubusercontent.com/HaiziIzzudin/localcommunity/main/src/lake.jpg',   'Kedai 2', 'Description kedai 2'],
+            ['https://raw.githubusercontent.com/HaiziIzzudin/localcommunity/main/src/telaga.jpg', 'Kedai 3', 'Description kedai 3'],
+            ['https://raw.githubusercontent.com/HaiziIzzudin/localcommunity/main/src/padi.jpg',   'Kedai 1', 'Description kedai 1'],
+            ['https://raw.githubusercontent.com/HaiziIzzudin/localcommunity/main/src/lake.jpg',   'Kedai 2', 'Description kedai 2'],
+            ['https://raw.githubusercontent.com/HaiziIzzudin/localcommunity/main/src/telaga.jpg', 'Kedai 3', 'Description kedai 3'],
         ];
         
         let starsHTML = '';
@@ -146,7 +146,7 @@ class imageAlbum extends HTMLElement {
 
             starsHTML += '<style>';
             starsHTML += '.img'+ (i+1) +'{';
-            starsHTML += 'background-image: url(src/images/'+ attractions[i][0] +');';
+            starsHTML += 'background-image: url('+ attractions[i][0] +');';
             starsHTML += 'animation: var(--anim-preset-upIn) '+ (0.1*(i+1)) +'s;';
             starsHTML += '}';
             starsHTML += '</style>';
@@ -167,15 +167,15 @@ class foodAlbum extends HTMLElement {
     connectedCallback() {
 
         let attractions: any[] = [
-            ['padi.jpg',   'Kedai 1', 'Description kedai 1'],
-            ['lake.jpg',   'Kedai 2', 'Description kedai 2'],
-            ['telaga.jpg', 'Kedai 3', 'Description kedai 3'],
-            ['logo-kedah.png', 'Kedai 4', 'Description kedai 4'],
-            ['logo-kedah.png', 'Kedai 4', 'Description kedai 4'],
-            ['telaga.jpg', 'Kedai 3', 'Description kedai 3'],
-            ['logo-kedah.png', 'Kedai 4', 'Description kedai 4'],
-            ['logo-kedah.png', 'Kedai 4', 'Description kedai 4'],
-            ['logo-kedah.png', 'Kedai 4', 'Description kedai 4'],
+            ['https://raw.githubusercontent.com/HaiziIzzudin/localcommunity/main/src/padi.jpg',   'Kedai 1', 'Description kedai 1'],
+            ['https://raw.githubusercontent.com/HaiziIzzudin/localcommunity/main/src/lake.jpg',   'Kedai 2', 'Description kedai 2'],
+            ['https://raw.githubusercontent.com/HaiziIzzudin/localcommunity/main/src/telaga.jpg', 'Kedai 3', 'Description kedai 3'],
+            ['https://raw.githubusercontent.com/HaiziIzzudin/localcommunity/main/src/padi.jpg',   'Kedai 1', 'Description kedai 1'],
+            ['https://raw.githubusercontent.com/HaiziIzzudin/localcommunity/main/src/lake.jpg',   'Kedai 2', 'Description kedai 2'],
+            ['https://raw.githubusercontent.com/HaiziIzzudin/localcommunity/main/src/telaga.jpg', 'Kedai 3', 'Description kedai 3'],
+            ['https://raw.githubusercontent.com/HaiziIzzudin/localcommunity/main/src/padi.jpg',   'Kedai 1', 'Description kedai 1'],
+            ['https://raw.githubusercontent.com/HaiziIzzudin/localcommunity/main/src/lake.jpg',   'Kedai 2', 'Description kedai 2'],
+            ['https://raw.githubusercontent.com/HaiziIzzudin/localcommunity/main/src/telaga.jpg', 'Kedai 3', 'Description kedai 3'],
         ];
         
         let starsHTML = '';
@@ -194,7 +194,7 @@ class foodAlbum extends HTMLElement {
 
             starsHTML += '<style>';
             starsHTML += '.food-img'+ (i+1) +'{';
-            starsHTML += 'background-image: url(src/images/'+ attractions[i][0] +');';
+            starsHTML += 'background-image: url('+ attractions[i][0] +');';
             starsHTML += 'animation: var(--anim-preset-leftIn) '+ (0.1*(i+1)) +'s;';
             starsHTML += '}';
             starsHTML += '</style>';
