@@ -35,13 +35,14 @@ import $ from 'jquery';
 class customHeader extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
+        <!-- PLEASE COPY FROM HERE TO COPY STOP HERE TO INNERHTML MAIN.TS -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.css" integrity="sha512-tx5+1LWHez1QiaXlAyDwzdBTfDjX07GMapQoFTS74wkcPMsI3So0KYmFe6EHZjI8+eSG0ljBlAQc3PQ5BTaZtQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-
+    
         <header class="flex-centerize">
             
         <img src="src/images/logo-kedah.png">
-
+    
         <nav>
                 
         <a href="index.html">Home</a>
@@ -62,6 +63,7 @@ class customHeader extends HTMLElement {
         
         
         </header>
+        <!-- COPY STOP HERE -->
         `
     }
 }
