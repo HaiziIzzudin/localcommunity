@@ -5,30 +5,6 @@ import $ from 'jquery';
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // THE CONTENT OF NAVBAR HAD TO BE DONE REVERSELY DUE TO UNKNOWN REASONS
 
 
@@ -37,11 +13,10 @@ class customHeader extends HTMLElement {
         this.innerHTML = `
         <!-- PLEASE COPY FROM HERE TO COPY STOP HERE TO INNERHTML MAIN.TS -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.css" integrity="sha512-tx5+1LWHez1QiaXlAyDwzdBTfDjX07GMapQoFTS74wkcPMsI3So0KYmFe6EHZjI8+eSG0ljBlAQc3PQ5BTaZtQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     
         <header class="flex-centerize">
             
-        <img src="src/logo-kedah.png">
+        <img src="`+ './logo-kedah.png' +`">
     
         <nav>
                 

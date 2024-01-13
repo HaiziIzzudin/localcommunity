@@ -14,8 +14,6 @@ export default defineConfig({
                 contacts: fileURLToPath(new URL('contacts.html', import.meta.url)),
                 newsroom: fileURLToPath(new URL('newsroom.html', import.meta.url)),
                 staff: fileURLToPath(new URL('staff.html', import.meta.url)),
-
-                logo: fileURLToPath(new URL('staff.html', import.meta.url)),
             },
         },
     },
