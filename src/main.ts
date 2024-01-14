@@ -55,26 +55,14 @@ customElements.define ('custom-header', customHeader)
 
 // DROPDOWN CONFIGURATIONS
 
-let isMouseOverDropdownButton = false;
 
-let menuBtn = document.querySelector('.fa-bars') as HTMLElement;
-let navExpand = document.querySelector('nav');
+
+
+
 
 let dropdownButton = document.querySelector('.dropdown-button');
-
 let myQuerySelector = document.querySelector('.dropdown-content');
 
-
-dropdownButton?.addEventListener('mouseover', () => {
-    isMouseOverDropdownButton = true;
-    console.log(isMouseOverDropdownButton)
-    myQuerySelector?.classList.add('show');
-});
-dropdownButton?.addEventListener('mouseout', () => {
-    isMouseOverDropdownButton = false;
-    console.log(isMouseOverDropdownButton)
-    myQuerySelector?.classList.remove('show');
-});
 dropdownButton?.addEventListener('click', () => {
     if (myQuerySelector?.classList.contains('show')) {
         console.log('Contains show. Removing and readding...');
@@ -89,20 +77,11 @@ dropdownButton?.addEventListener('click', () => {
 
 
 
-myQuerySelector?.addEventListener('mouseover', () => {
-    isMouseOverDropdownButton = true;
-    console.log(isMouseOverDropdownButton)
-    myQuerySelector?.classList.add('show');
-});
 
 
-myQuerySelector?.addEventListener('mouseout', () => {
-    isMouseOverDropdownButton = false;
-    console.log(isMouseOverDropdownButton)
-    myQuerySelector?.classList.remove('show');
-});
 
-
+let menuBtn = document.querySelector('.fa-bars') as HTMLElement;
+let navExpand = document.querySelector('nav');
 
 menuBtn?.addEventListener('click', () => {
     
@@ -110,6 +89,26 @@ menuBtn?.addEventListener('click', () => {
         navExpand?.classList.remove('show');
     } else {
         navExpand?.classList.add('show');
+    }
+});
+
+
+
+
+
+
+
+
+
+let tocBtn = document.querySelector('.toc') as HTMLElement;
+let tocExpand = document.querySelector('.sidenav');
+
+tocBtn?.addEventListener('click', () => {
+    
+    if (tocExpand?.classList.contains('sidenav-show')) {
+        tocExpand?.classList.remove('sidenav-show');
+    } else {
+        tocExpand?.classList.add('sidenav-show');
     }
 });
 
@@ -255,12 +254,17 @@ customElements.define ('food-album', foodAlbum);
 
 // SMOOTH SCROLLING OFFSET
 
-$('a[href*="#"]').on('click', function(e) {
+$('a[href*="#"], button[onclick^="window.location.href = \'#backtotop\'"]').on('click', function(e) {
     e.preventDefault();
-    const href = $(this).attr('href');
+    let href;
+    if ($(this).is('a')) {
+        href = $(this).attr('href');
+    } else {
+        href = $(this).attr('onclick')!.split("'")[1];
+    }
     if (href) {
         $('html, body').animate({
-           scrollTop: $(href).offset()!.top - 80, // Offset value
+            scrollTop: $(href).offset()!.top - 80, // Offset value
         }, 500, 'linear');
     }
 });
