@@ -65,9 +65,8 @@ let myQuerySelector = document.querySelector('.dropdown-content');
 
 dropdownButton?.addEventListener('click', () => {
     if (myQuerySelector?.classList.contains('show')) {
-        console.log('Contains show. Removing and readding...');
+        console.log('Contains show. Removing...');
         myQuerySelector?.classList.remove('show');
-        myQuerySelector?.classList.add('show');
     } else {
         console.log("Don't have show class. Adding...");
         myQuerySelector?.classList.add('show');
@@ -124,7 +123,7 @@ tocBtn?.addEventListener('click', () => {
 
 
 
-// DETECT DARK MODE
+// DETECT DARK OR LIGHT MODE
 
 let theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
 console.log(theme);
@@ -264,7 +263,57 @@ $('a[href*="#"], button[onclick^="window.location.href = \'#backtotop\'"]').on('
     }
     if (href) {
         $('html, body').animate({
-            scrollTop: $(href).offset()!.top - 80, // Offset value
+            scrollTop: $(href).offset()!.top - 95, // Offset value
         }, 500, 'linear');
     }
 });
+
+
+
+
+
+
+
+
+// NEWSROOM: SHOW SIDENAV IF MEDIAQUERY IS ABOVE BREAKPOINT TABLET
+
+let sidenav = document.querySelector('.sidenav');
+
+
+// FUNCTION DEFINITION SIDENAV
+function sidenavClass() {
+
+    if (window.matchMedia("(min-width: 850px)").matches) {
+    
+        console.info("The browser window is >=850px.");
+        sidenav?.classList.add('sidenav-show');
+        sidenav?.classList.remove('sidenav-hide');
+    
+    } else {
+    
+    console.info("The browser window is <850px.");
+        
+        sidenav?.classList.add('sidenav-hide');
+        sidenav?.classList.remove('sidenav-show');
+        
+    }
+    
+    let toc = document.querySelector('.toc');
+    
+    toc?.addEventListener('click', function() {
+        
+        if (sidenav?.classList.contains('sidenav-hide')) {
+            sidenav?.classList.remove('sidenav-hide');
+            sidenav?.classList.add('sidenav-show');
+        } else {
+            sidenav?.classList.remove('sidenav-show');
+            sidenav?.classList.add('sidenav-hide');
+        }
+        
+    });
+
+}
+
+
+window.addEventListener('resize', sidenavClass);
+sidenavClass();
