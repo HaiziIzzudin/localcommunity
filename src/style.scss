@@ -227,7 +227,7 @@ h1 {
   margin-bottom: 50px;
 }
 
-h2, h3, h4, h5 {
+h2, h3, h4, h5, h6 {
   font-family: var(--font-title);
   margin-bottom: 15px;
   color: var(--text-color);
@@ -526,14 +526,13 @@ nav {
       display: flex;
       flex-direction: column-reverse;
       
-      color: whitesmoke;
-      
-      
       h5, p { 
         position: relative;
         z-index: 5;
         
         margin-left: 15px; 
+
+        color: var(--text-color-invert);
       }
       p { margin-bottom: 15px; }
     }
@@ -563,18 +562,17 @@ nav {
 
 
 
-// AMENITIES STYLING
-
+// AMENITIES & ADMINISTRATION STYLING
 .food-images {
   visibility: hidden;
+
+  border-radius: 150px;
 
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: local;
 
   width: 300px; height: 300px;
-
-  border-radius: 150px;
 
   display: flex;
   flex-direction: column-reverse;
@@ -586,11 +584,47 @@ nav {
     border-radius: var(--rounded-corners-n-blur);
   }
 }
-food-album {
+.admin {
+  
+  visibility: hidden;
+  
+  border-radius: calc(var(--rounded-corners-n-blur) * 1.75);
+  
+  background-color: var(--accent-medium);
+  padding: 10px 10px 15px;
+  
+  h6, p {
+    text-align: center;
+    margin: 0;
+  }
+  h6 {
+    font-size: 20px;
+  }
+  img {
+    width: 100%;
+    max-width: 300px;
+    height: 250px; 
+    object-fit: cover;
+    object-position: 0 -40px;
+
+    display: block;
+    margin: 0 auto 10px;
+    
+    border-radius: var(--rounded-corners-n-blur);
+  }
+}
+food-album, admin-charts {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
 }
+
+
+
+
+
+
+
 
 
 
@@ -769,7 +803,7 @@ section {
     }
   }
 
-  image-album, food-album { 
+  image-album, food-album, admin-charts { 
     grid-template-columns: 1fr !important; 
     max-width: 500px;
     margin: 0 auto;
