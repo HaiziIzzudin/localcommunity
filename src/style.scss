@@ -40,6 +40,7 @@ $breakpoint-tablet: 850px;
     --accent-verydark-80: var(--accent-verydark);
     
     --text-color: black;
+    --text-color-invert: white;
     
     --bg-color: var(--accent-verylight);
     
@@ -51,7 +52,6 @@ $breakpoint-tablet: 850px;
     
   }
   
-  --text-color-invert: white;
   
   --gradient-image-overlay: linear-gradient(5deg, 
   rgba(0,0,0,1) 0%, 
@@ -66,7 +66,7 @@ $breakpoint-tablet: 850px;
     rgba(0,0,0,0.30) 300px, 
     rgba(0,0,0,0.60) 400px, 
     rgba(0,0,0,0.90) 500px);
-
+    
     --about-bg-color: linear-gradient(180deg, 
     rgba(0,0,0,0) 0%, 
     rgba(0,0,0,0.30) 430px, 
@@ -82,15 +82,18 @@ $breakpoint-tablet: 850px;
     --accent-verydark-80: rgba(0, 0, 0, 0.8);
     
     --text-color: white;
+    --text-color-invert: black;
     
     --bg-color: var(--accent-dark);
-
-  
+    
+    
   }
   
   
   
   --anim-preset-upIn: upIn 1.5s cubic-bezier(0, 1, 0, 1) forwards;
+  --anim-preset-blurIn: blurIn .5s forwards;
+  --anim-preset-zoomIn: zoomIn .5s forwards;
   --anim-preset-leftIn: leftIn 1.5s cubic-bezier(0, 1, 0, 1) forwards;
   --anim-preset-rightIn: rightIn 1s cubic-bezier(0, 1, 0, 1) forwards;
   
@@ -153,41 +156,6 @@ a {
 
 
 
-// LIGHT THEME & DARK THEME CONFIG
-.light-theme {
-  background-color: var(--accent-verylight);
-  
-
-
-  .solid-cover {
-    & h1, h2 {
-      color: whitesmoke;
-    }
-  }
-  .about-content {
-    color: whitesmoke;
-  }
-  .backToTop {
-    button {
-      border: 1px solid #000;
-      color: black;
-      background-color: #00000000;
-    }
-  }
-
-}
-.dark-theme {
-  
-  
-  .solid-cover {
-    & h1, h2 {
-      color: whitesmoke;
-    }
-  }
-  .about-content {
-    color: whitesmoke;
-  }
-}
 
 
 
@@ -249,21 +217,20 @@ button {
 
   padding: 5px 15px;
 
-  // background-color: #00000000;
-  // color: whitesmoke;
-  // border: 1px solid whitesmoke;
-
   transition-duration: 0.2s;
 
   cursor: pointer;
+  opacity: 0;
 
+  border: 1px solid white;
+  background-color: #00000000;
 }
 
 button:hover {
   box-shadow: 0 0 10px 0 whitesmoke;
 }
 button:active {
-  transform: scale(95%, 95%);
+  transform: scale(90%, 90%);
 }
 
 
@@ -307,7 +274,7 @@ header a {
   border-radius: var(--rounded-corners-n-blur);
   
   transition: .2s;
-  color: var(--text-color-invert);
+  color: white;
 }
 header a:hover {
   background-color: #ffffff22;
@@ -399,24 +366,28 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.solid-cover main {
-  width: 380px; 
 
-  margin: 0 20px;
-  white-space: nowrap;
   
-  h1, h2, button {
-    visibility: hidden;
-  }
-  h1 {
-    animation: upIn 1.5s cubic-bezier(0, 1, 0, 1) forwards .5s;
-  }
-  h2 {
-    animation: upIn 1.5s cubic-bezier(0, 1, 0, 1) forwards calc(.5s + .2s);
-  }
-  button {
-    animation: upIn 1.5s cubic-bezier(0, 1, 0, 1) forwards calc(.5s + .4s);
+  main {
+    width: 380px; 
+    
+    margin: 0 20px;
+    white-space: nowrap;
+
+    
+    h1, h2, button {
+      opacity: 0;
+      color: white;
+    }
+    h1 {
+      animation: var(--anim-preset-blurIn) .5s;
+    }
+    h2 {
+      animation: var(--anim-preset-blurIn) calc(.5s + .2s);
+    }
+    button {
+      animation: var(--anim-preset-blurIn) calc(.5s + .4s);
+    }
   }
 }
 
@@ -433,16 +404,14 @@ nav {
   
   background: var(--gradient-cover);
   
-  * {
-    visibility: hidden;
-  }
+  * { opacity: 0; }
   h3, h4 { 
-    animation: upIn 1.5s cubic-bezier(0, 1, 0, 1) forwards .0s; 
-    color: var(--text-color-invert);
+    animation: var(--anim-preset-leftIn) .0s; 
+    color: white;
   }
   p { 
-    animation: upIn 1.5s cubic-bezier(0, 1, 0, 1) forwards .5s; 
-    color: var(--text-color-invert);
+    animation: var(--anim-preset-leftIn) .5s; 
+    color: white;
   }
 }
 
@@ -470,15 +439,12 @@ nav {
 
   z-index: 50;
 
-  visibility: hidden;
-}
-.about-content {
-  h3, h4 {
-    animation: leftIn 1.5s cubic-bezier(0, 1, 0, 1) forwards;
-  }
-  p {
-    animation: leftIn 1.5s cubic-bezier(0, 1, 0, 1) .5s forwards;
-  }
+  opacity: 0;
+
+  color: var(--text-color-invert);
+  
+  h3, h4 { animation: var(--anim-preset-leftIn); }
+  p { animation: var(--anim-preset-leftIn) .5s; }
 }
 
 
@@ -521,7 +487,7 @@ nav {
       height: 300px;
       border-radius: calc(var(--rounded-corners-n-blur) * 1.5);
       
-      visibility: hidden;
+      opacity: 0;
       
       display: flex;
       flex-direction: column-reverse;
@@ -532,7 +498,7 @@ nav {
         
         margin-left: 15px; 
 
-        color: var(--text-color-invert);
+        color: white;
       }
       p { margin-bottom: 15px; }
     }
@@ -566,7 +532,8 @@ nav {
 
 .admin {
   
-  visibility: hidden;
+  // visibility: hidden;
+  opacity: 0;
   
   border-radius: calc(var(--rounded-corners-n-blur) * 1.75);
   
@@ -635,8 +602,6 @@ html {
   visibility: hidden;
   
   position: fixed;
-  // left: calc(-20% + -40px); 
-  // left: calc(0); 
   
   height: calc(100% - 160px);
   overflow: auto;
@@ -670,14 +635,14 @@ html {
 
 section {
   
-  visibility: hidden;
-
+  
   max-width: 800px;
-
+  
   margin: 0 auto;
   padding: 0 20px;
   
   article {
+    opacity: 0;
     
     img {
       width: 80%;
@@ -710,8 +675,16 @@ section {
   .fa-caret-up {
     margin: 0;
   }
+
+  button {
+    animation: var(--anim-preset-zoomIn);
+
+    border: 1px solid var(--text-color);
+    color: var(--text-color);
+    background-color: var(--text-color-invert);
+  }
 }
-.toc {
+.toc { // for responsive design
   visibility: hidden;
 }
 .main-newsroom {
@@ -848,7 +821,7 @@ section {
   }
   100% {
     transform: translateX(0);
-    visibility: visible;
+    opacity: 1;
   }
 }
 
@@ -879,6 +852,27 @@ section {
   }
   100% {
     transform: translateY(0);
-    visibility: visible;
+    // visibility: visible;
+    opacity: 1;
+  }
+}
+@keyframes blurIn {
+  0% {
+    transform: scale(70%, 70%) translateY(100px);
+    filter: blur(20px);
+  }
+  100% {
+    transform: scale(100%, 100%) translateY(0);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes zoomIn {
+  0% {
+    transform: scale(70%, 70%);
+  }
+  100% {
+    transform: scale(100%, 100%);
+    opacity: 1;
   }
 }

@@ -178,7 +178,7 @@ class imageAlbum extends HTMLElement {
             starsHTML += '<style>';
             starsHTML += '.img'+ (i+1) +'{';
             starsHTML += 'background-image: url('+ attractions[i][0] +');';
-            starsHTML += 'animation: var(--anim-preset-upIn) '+ (0.1*(i+1)) +'s;';
+            starsHTML += 'animation: var(--anim-preset-blurIn) '+ (0.1*(i+1)) +'s;';
             starsHTML += '}';
             starsHTML += '</style>';
         }
@@ -194,50 +194,7 @@ customElements.define ('image-album', imageAlbum);
 
 
 
-class foodAlbum extends HTMLElement {
-    connectedCallback() {
 
-        let attractions: any[] = [
-            ['https://raw.githubusercontent.com/HaiziIzzudin/localcommunity/main/src/padi.jpg',   'Kedai 1', 'Description kedai 1'],
-            ['https://raw.githubusercontent.com/HaiziIzzudin/localcommunity/main/src/lake.jpg',   'Kedai 2', 'Description kedai 2'],
-            ['https://raw.githubusercontent.com/HaiziIzzudin/localcommunity/main/src/telaga.jpg', 'Kedai 3', 'Description kedai 3'],
-            ['https://raw.githubusercontent.com/HaiziIzzudin/localcommunity/main/src/padi.jpg',   'Kedai 1', 'Description kedai 1'],
-            ['https://raw.githubusercontent.com/HaiziIzzudin/localcommunity/main/src/lake.jpg',   'Kedai 2', 'Description kedai 2'],
-            ['https://raw.githubusercontent.com/HaiziIzzudin/localcommunity/main/src/telaga.jpg', 'Kedai 3', 'Description kedai 3'],
-            ['https://raw.githubusercontent.com/HaiziIzzudin/localcommunity/main/src/padi.jpg',   'Kedai 1', 'Description kedai 1'],
-            ['https://raw.githubusercontent.com/HaiziIzzudin/localcommunity/main/src/lake.jpg',   'Kedai 2', 'Description kedai 2'],
-            ['https://raw.githubusercontent.com/HaiziIzzudin/localcommunity/main/src/telaga.jpg', 'Kedai 3', 'Description kedai 3'],
-        ];
-        
-        let starsHTML = '';
-        
-        for (let i = 0; i < attractions.length; i++) {
-            starsHTML += '<div class="food-images food-img'+ (i+1) +'">';
-            
-            starsHTML += '<div class="food-captions">';
-            starsHTML += '<h5>'+ attractions[i][1] +'</h5>';
-            starsHTML += '<p>'+ attractions[i][2] +'</p>';
-            starsHTML += '</div>';
-            
-            starsHTML += '</div>';
-
-
-
-            starsHTML += '<style>';
-            starsHTML += '.food-img'+ (i+1) +'{';
-            starsHTML += 'background-image: url('+ attractions[i][0] +');';
-            starsHTML += 'animation: var(--anim-preset-leftIn) '+ (0.1*(i+1)) +'s;';
-            starsHTML += '}';
-            starsHTML += '</style>';
-        }
-        
-        this.innerHTML = starsHTML;
-        
-    }
-}
-
-
-customElements.define ('food-album', foodAlbum);
 
 
 
@@ -503,11 +460,13 @@ class adminCharts extends HTMLElement {
                 starsHTML += '    <h6 style="font-size: 25px;">'+ adminAssets[i][1] +'</h6>';
                 
                 for (let j = 0; j < adminAssets[i][2].length; j++) {
-                    starsHTML += '<div class="admin admin-child" ';
-                    starsHTML += 'style="animation: var(--anim-preset-upIn) '+ (0.1 * ((i) + j)) +'s;">'
-                    starsHTML += '    <h6>'+ adminAssets[i][2][j][0] +'</h6>';
-                    starsHTML += '    <p>'+ adminAssets[i][2][j][1] +'</p>';
-                    starsHTML += '</div>';
+                    starsHTML += `
+                    <div class="admin admin-child" 
+                    style="animation: var(--anim-preset-upIn) `+ (0.1 * ((i+2) + j)) +`s;">
+                        <h6>`+ adminAssets[i][2][j][0] +`</h6>
+                        <p>`+ adminAssets[i][2][j][1] +`</p>
+                    </div>
+                    `;
                 }
             }
             starsHTML += '</div>';
@@ -518,9 +477,9 @@ class adminCharts extends HTMLElement {
             if (adminAssets[i][0] === 'no-display') {
                 console.log('No animation applied. Skipping...');
             } else if (adminAssets[i][0] === 'show') {
-                starsHTML += '.admin-animation'+ (i) +'{animation: var(--anim-preset-upIn) '+ (0.1*(i)) +'s;}';
+                starsHTML += '.admin-animation'+ (i) +'{animation: var(--anim-preset-blurIn) '+ (0.1*(i)) +'s;}';
             } else if ((adminAssets[i][0] === 'no-img') || (adminAssets[i][0] === 'parent')) {
-                starsHTML += '.admin-animation'+ (i) +'{animation: var(--anim-preset-upIn) '+ (0.1*(i)) +'s;}';
+                starsHTML += '.admin-animation'+ (i) +'{animation: var(--anim-preset-blurIn) '+ (0.1*(i)) +'s;}';
             }
         }
         starsHTML += '</style>';
