@@ -349,7 +349,7 @@ nav {
 
   padding: 0 0 5px 5px;
   margin-top: 0px;
-  margin-left: 170px;
+  margin-left: 320px;
   border-radius: calc(var(--rounded-corners-n-blur) * 1.5);
 
   opacity: 0;
@@ -562,28 +562,8 @@ nav {
 
 
 
-// AMENITIES & ADMINISTRATION STYLING
-.food-images {
-  visibility: hidden;
+// ADMINISTRATION STYLING
 
-  border-radius: 150px;
-
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: local;
-
-  width: 300px; height: 300px;
-
-  display: flex;
-  flex-direction: column-reverse;
-
-  text-align: center;
-
-  .food-captions {
-    background-color: #bc6c25;
-    border-radius: var(--rounded-corners-n-blur);
-  }
-}
 .admin {
   
   visibility: hidden;
@@ -591,7 +571,9 @@ nav {
   border-radius: calc(var(--rounded-corners-n-blur) * 1.75);
   
   background-color: var(--accent-medium);
-  padding: 10px 10px 15px;
+  padding: 10px 10px 12.5px;
+  
+  overflow: hidden;
   
   h6, p {
     text-align: center;
@@ -606,12 +588,18 @@ nav {
     height: 250px; 
     object-fit: cover;
     object-position: 0 -40px;
-
+    
     display: block;
     margin: 0 auto 10px;
     
     border-radius: var(--rounded-corners-n-blur);
   }
+}
+.admin-child{
+  background-color: var(--accent-light);
+  margin: 10px 0 0px;
+  
+  border-radius: calc(var(--rounded-corners-n-blur));
 }
 food-album, admin-charts {
   display: grid;
