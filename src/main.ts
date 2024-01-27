@@ -54,12 +54,6 @@ customElements.define ('custom-header', customHeader)
 
 
 // DROPDOWN CONFIGURATIONS
-
-
-
-
-
-
 let dropdownButton = document.querySelector('.dropdown-button');
 let myQuerySelector = document.querySelector('.dropdown-content');
 
@@ -270,23 +264,26 @@ class adminCharts extends HTMLElement {
 
 
                 ['parent', '<br>Unit<br>Undang-undang<br><br>',[
-                    ['Nama 1', 'jawatan 1'],
-                    ['Nama 2', 'jawatan 2'],
+                    ['PENOLONG PEGAWAI UNDANG-UNDANG L29','Mohd Redzuan Bin Cyril Pancratius'],
+                    ['PEMBANTU TADBIR (PERKERANIAN/OPERASI) N22 (TBK1)','Zuriana Binti Hashim'],
                 ]], //6
                 ['parent', 'Unit<br>Komunikasi Korporat<br>dan Perhubungan Awam',[
-                    ['Nama 1', 'jawatan 1'],
-                    ['Nama 2', 'jawatan 2'],
-                    ['Nama 3', 'jawatan 3'],
+                    ['PENOLONG PEGAWAI TADBIR N29','Radzie Iszuan Bin Jamadi'],
+                    ['PEMBANTU TADBIR (PERKERANIAN/OPERASI) N19','Nur Aina Afifah Binti Abd Latiff - K'],
+                    ['PEMBANTU AWAM H11','Norwani Binti Ahmad - K'],
                 ]],
-                ['parent', '<br>Unit<br>Pusat Sehenti<br><br>',[
-                    ['Nama 1', 'jawatan 1'],
-                    ['Nama 2', 'jawatan 2'],
-                    ['Nama 3', 'jawatan 3'],
+                ['parent', '<br>Unit<br>Pusat Sehenti (OSC)<br><br>',[
+                    ['PEGAWAI PERANCANG BANDAR DAN DESA (PLANMalaysia) J41','Natasha Binti Shafiee'],
+                    ['PENOLONG JURUTERA JA36 (TBK1)','Ahmad Azman Bin Idris'],
+                    ['PEMBANTU TADBIR (PERKERANIAN/OPERASI) N19', `<ol>
+                    <li>Siti Mariam Binti Ariffin
+                    <li>Muhammad Hanif Bin Mat Dzahir - K
+                    `],
                 ]],
                 ['no-display',"", '', ''],
                 ['parent', 'Unit<br>Audit Dalam',[
-                    ['Nama 1', 'jawatan 1'],
-                    ['Nama 2', 'jawatan 2'],
+                    ['PENOLONG JURUAUDIT W29','Muhamad Shahnizam Bin Mokhtar'],
+                    ['PEMBANTU AKAUNTAN W19',"Muhammad 'Adnin Bin Subri - K"],
                 ]], //9
                 ['no-display',"", '', ''],
                 
@@ -297,21 +294,37 @@ class adminCharts extends HTMLElement {
                 ['no-display',"", '', ''],
 
                 ['parent', 'Bahagian<br>Pentadbiran',[
-                    ['Nama 1', 'jawatan 1'],
-                    ['Nama 2', 'jawatan 2'],
-                    ['Nama 1', 'jawatan 1'],
-                    ['Nama 2', 'jawatan 2'],
-                    ['Nama 2', 'jawatan 2'],
+                    ['PENOLONG PEGAWAI TADBIR N29','Wan Armaedah Binti Wan Ikram'],
+                    ['PEMBANTU TADBIR (PERKERANIAN/OPERASI) N22','Saidatunor Shaniza Binti Md Desa'],
+                    ['PEMBANTU TADBIR (PERKERANIAN/OPERASI) N19', `<ol>
+                    <li>Nasrul Bin Noorulin 
+                    <li>Siti Sarah Najwa Binti Sahid Abdullah - K
+                    `],
+                    ['PEMBANTU OPERASI N11', `<ol>
+                    <li>Md Isa Bin Abdul Rahman 
+                    <li>Mohd Amir Asyraf Bin Ismail - K
+                    <li>Salehudin Bin Hj Ismail - K
+                    `],
+                    ['PEMANDU KENDERAAN H11', `<ol>
+                    <li>Mohd Yusof Bin Saad
+                    <li>Shahrul Azhar Bin Ab Manan
+                    `],
                 ]],
                 ['parent', 'Bahagian<br>Sumber Manusia',[
-                    ['Nama 1', 'jawatan 1'],
-                    ['Nama 2', 'jawatan 2'],
-                    ['Nama 1', 'jawatan 1'],
+                    ['PENOLONG PEGAWAI TADBIR N29','Muhammad Azrai Bin Ahmad Hajazi'],
+                    ['PEMBANTU TADBIR (PERKERANIAN/OPERASI) N22','Darusalam Bin Kamis'],
+                    ['PEMBANTU TADBIR (PERKERANIAN/OPERASI) N19', `<ol>
+                    <li>Rohaya Binti Omar
+                    <li>Muhammad Fashwan Bin Dato' Fathullah Suhaimi - K
+                    `],
                 ]],
                 ['parent', 'Bahagian<br>ICT',[
-                    ['Nama 1', 'jawatan 1'],
-                    ['Nama 2', 'jawatan 2'],
-                    ['Nama 1', 'jawatan 1'],
+                    ['PENOLONG PEGAWAI TEKNOLOGI MAKLUMAT FA29','Zahrul Anwar Bin Zakaria'],
+                    ['PEMBANTU TADBIR (PERKERANIAN/OPERASI) N22 (TBK1)','Md Shamsul Bin Awang'],
+                    ['JURUTEKNIK KOMPUTER FT19', `<ol>
+                    <li>Mohd Zaidi Bin Yusuff
+                    <li>Nur Hidayah Binti Riduan - K
+                    `],
                 ]], //15
 
 
@@ -321,19 +334,27 @@ class adminCharts extends HTMLElement {
                 ['no-display',"", '', ''],
 
                 ['parent', 'Bahagian<br>Hasil',[
-                    ['Nama 1', 'jawatan 1'],
-                    ['Nama 2', 'jawatan 2'],
-                    ['Nama 1', 'jawatan 1'],
+                    ['PENOLONG AKAUNTAN W32 (TBKI)', 'Mohamad Najib bin Othman'],
+                    ['PEMBANTU TADBIR (PERKERANIAN/OPERASI) N19', `
+                    <ol>
+                    <li>Asma binti Abdullah
+                    <li>Siti Noor Ba'ee binti Ahmad Tahir
+                    <li>Luqran Hakim bin Mohd Faizal - K
+                    `],
+                    ['PENGHANTAR NOTIS H11 ', 'Mohamad Hafizuddin bin Bakori'],
                 ]],
                 ['parent', 'Bahagian<br>Perbelanjaan',[
-                    ['Nama 1', 'jawatan 1'],
-                    ['Nama 2', 'jawatan 2'],
-                    ['Nama 1', 'jawatan 1'],
-                    ['Nama 1', 'jawatan 1'],
-                    ['Nama 1', 'jawatan 1'],
+                    ['PENOLONG AKAUNTAN W29', 'Nor Hanisah binti Hamzah'],
+                    ['PEMBANTU TADBIR (PERKERANIAN/OPERASI) N22','Fitrinnida binti Abd Samad'],
+                    ['PEMBANTU TADBIR (PERKERANIAN/OPERASI) N19','Nur Famiza Binti Ahmad'],
+                    ['PEMBANTU TADBIR (KEWANGAN) 16/19','Noor Azlinda Binti Jamaludin'],
+                    ['PEMBANTU AKAUNTAN W19','Nurain Binti A. Rahman - K'],
                 ]],
                 ['parent', 'Unit<br>Perolehan',[
-                    ['Nama 1', 'jawatan 1'],
+                    ['PEMBANTU AKAUNTAN WI9', `<ol>
+                    <li>Mohd Mazlan Bin Wahab - K
+                    <li>Qatrulnada Binti Abd. Halim -K
+                    `],
                 ]], //21
 
 
@@ -343,13 +364,21 @@ class adminCharts extends HTMLElement {
                 ['no-display',"", '', ''],
                 
                 ['parent', 'Bahagian<br>Penilaian',[
-                    ['Nama 1', 'jawatan 1'],
+                    ['PEMBANTU PENILAIAN W19', `<ol>
+                    <li>Cik Mahaya Binti Mohd Yazid
+                    <li>Shakira Bashira Binti Ramli
+                    <li>Khairul Azha Bin Mohd Rodzi - K
+                    `],
                 ]],
                 ['parent', 'Bahagian<br>Pengurusan Harta',[
-                    ['Nama 1', 'jawatan 1'],
-                    ['Nama 2', 'jawatan 2'],
-                    ['Nama 1', 'jawatan 1'],
-                    ['Nama 1', 'jawatan 1'],
+                    ['PENOLONG PEGAWAI PENILAIAN W29','Faridatul Mastura Binti Yahya'],
+                    ['PEMBANTU TADBIR (PERKERANIAN/OPERASI) N19','Siti Nadiah Binti Mohd Rodzi'],
+                    ['PEMBANTU AWAM H11', `<ol>
+                    <li>Khairul Fathi Bin Md Ramli- K
+                    <li>Mohd Nizar Adha Bin Che Sobar - K
+                    <li>Mohamad Syawal Bin Nordin - K
+                    <li>Ahmad Syukri Bin Ismail - K
+                    `],
                 ]], //26
                 ['no-display',"", '', ''],
 
@@ -360,31 +389,71 @@ class adminCharts extends HTMLElement {
                 ['no-display',"", '', ''],
                 
                 ['parent', 'Bahagian<br>Bangunan',[
-                    ['Nama 1', 'jawatan 1'],
+                    ['PENOLONG JURUTERA JA29', 'Najmiyah binti Abdullah'],
                 ]],
                 ['parent', 'Bahagian<br>Penyelenggaraan',[
-                    ['Nama 1', 'jawatan 1'],
-                    ['Nama 2', 'jawatan 2'],
+                    ['PENOLONG JURUTERA JA29', 'Mohammad Yusairee bin Abdul Wahid'],
+                    ['PEMBANTU AWAM H11', `
+                    <ol>
+                    <li>Zainon bin Bahari
+                    <li>Fairol Asdzahar bin Mohd Arshad
+                    <li>Mohd Saiful Azwan Bin Abdul Basir - K
+                    <li>Hazrul Bin Hashim - K
+                    <li>Mohd Hafiz Bin Zameri - K
+                    <li>Muhammad Farhan Bin Natmat - K
+                    `],
                 ]],
                 ['parent', 'Unit Projek<br>dan Infrastruktur',[
-                    ['Nama 1', 'jawatan 1'],
+                    ['PENOLONG JURUTERA JA29', 'Mohd Izzat bin Jamaludin'],
                 ]],
                 ['no-display',"", '', ''], //27
-                ['no-img'    ,"RIZAL BIN AHMAD", 'Penolong Jurutera JA36'],
+                ['no-img'    ,"PEMBANTU TADBIR (PEKERANIAN/OPERASI) N19", `
+                <ol>
+                <li>Najwani binti Abu Hassan
+                <li>Mohd Fakharul Anuar bin Ahmad Nazawi
+                <li>Zulaikha binti Kamarudin - K
+                `],
                 ['no-display',"", '', ''],
 
 
                 
                 ['no-display',"", '', ''], //34
-                ['no-img'    ,"TPR. MOHD NASIR BIN MOHAMMAD", 'Pegawai Perancang Bandar dan Desa JA44'],
+                ['no-img'    ,"TPr. MOHD NASIR BIN MOHAMMAD", 'Pegawai Perancang Bandar dan Desa JA44'],
                 ['no-display',"", '', ''],
                 
                 ['parent', 'Bahagian<br>Perancangan Fizikal',[
-                    ['Nama 1', 'jawatan 1'],
+                    ['PENOLONG PEGAWAI PERANCANG BANDAR DAN DESA JA36 (TBK1)','Siti Rohayu Binti Othman'],
+                    ['PENOLONG PEGAWAI PERANCANG BANDAR DAN DESA JA29',`<ol>
+                    <li>Mohd Azrul Hafizi Bin Adnan
+                    <li>Rostam Bin Razak
+                    `],
+                    ['PEMBANTU TADBIR (PERKERANIAN/OPERASI) N19',`<ol>
+                    <li>Zawiyah Binti Mahmud
+                    <li>Shafrida Binti Mohd Kassim
+                    `],
+                    ['PELUKIS PELAN JA19','Khairul Anuar Bin Mohd Fauzi - K'],
                 ]],
                 ['parent', 'Bahagian<br>Landskap',[
-                    ['Nama 1', 'jawatan 1'],
-                    ['Nama 2', 'jawatan 2'],
+                    ['PENOLONG ARKITEK LANDSKAP JA29','Khairul Azhar Bin Idris'],
+                    ['PEMBANTU TADBIR (PERKERANIAN/OPERASI) N19','Nur Nasuha Binti Khairul Anwar - K'],
+                    ['PENOLONG PEGAWAI PERTANIAN G29','Mohd Tajuddin Bin Omar@Azizan'],
+                    ['PEMBANTU AWAM H11',`<ol>
+                    <li>Rasli Bin Mat Hussain	
+                    <li>Khairul Anuar Bin Haron	
+                    <li>Noroden Bin Abdul Rahim	
+                    <li>Nasrol Haizi Bin Talib	
+                    <li>Mohd Adzrul Bin Mahabib Yusree - K
+                    <li>Suzally Bin Saad
+                    <li>Zaibidi Bin Che Tam - K
+                    <li>Badrol Kamal Bin Abu Bakar - K
+                    <li>Mufti Bin Yaacob - K
+                    <li>Muhammad Zulmajdi Bin Bukhari - K
+                    <li>Nasrul Hamdi Bin Kadir - K
+                    <li>Mohamad Badrul Hanif Bin Nasri - K
+                    <li>Mohammad Fadhli Bin Rosli - K
+                    <li>Muhammad Akmal Bin Ismail- K
+                    <li>Muhammad Yusrizan Syazri Bin Yusree - K
+                    `],
                 ]],
                 ['no-display',"", '', ''],
                 
@@ -395,12 +464,16 @@ class adminCharts extends HTMLElement {
                 ['no-display',"", '', ''],
                 
                 ['parent', 'Bahagian<br>Pelesenan',[
-                    ['Nama 1', 'jawatan 1'],
-                    ['Nama 1', 'jawatan 1'],
+                    ['MIMI JAZWANI BINTI JAMALLUDDIN', 'Pembantu Kesihatan Awam U19'],
+                    ['MOHAMMAD BADRUL HAFIZ BIN NASRI - K', 'Pembantu Tadbir (Perkeranian/Operasi) N19'],
                 ]],
                 ['parent', 'Bahagian<br>Kesihatan',[
-                    ['Nama 1', 'jawatan 1'],
-                    ['Nama 2', 'jawatan 2'],
+                    ['NORSIAH BINTI MAHAMUD', 'Penolong Pegawai Kesihatan Persekitaran U32 (TBK1)'],
+                    ['PEMBANTU KESIHATAN AWAM U19', `
+                    <ol>
+                    <li>Muhamad Nazmi Bin Kamarudin
+                    <li>Mohamad Hafizhafizi Bin Abidin
+                    `],
                 ]],
                 ['no-display',"", '', ''],
                 
@@ -413,14 +486,21 @@ class adminCharts extends HTMLElement {
                 ['no-img'    ,"SHAMSUDIN BIN BAHAROM", 'Pembantu Penguat Kuasa KP22'],
                 ['no-display',"", '', ''],
                 
-                ['parent', 'Pembantu Penguat<br>Kuasa KP19',[
-                    ['Nama 1', 'jawatan 1'],
-                    ['Nama 1', 'jawatan 1'],
-                ]],
-                ['parent', 'Pembantu Tadbir<br>(Perkeranian/ Operasi) N22 (TBK1)',[
-                    ['Nama 1', 'jawatan 1'],
-                    ['Nama 2', 'jawatan 2'],
-                ]],
+                ['no-img', 'PEMBANTU PENGUAT KUASA KP19',`<ol>
+                <li>Munirah Binti Ayob
+                <li>Che Wan Nur Hazwani Binti Che Wan Azmi
+                <li>Muhamad Shaiful Bin Harun
+                <li>Zulfadzli Bin Mat Rodi
+                <li>Mohd Farhan Aswad Bin Badrisham
+                <li>Mohd Roshidi Bin Sharif - K
+                <li>Mohd Nafis Syazwan Bin Saawi - K
+                <li>Hamizi Bin Hamzah - K
+                <li>Mohammad Rashdan Bin Ramli - K
+                <li>Abdul Jamil Bin Yusof - K
+                <li>Nordin Bin Ismail - K
+                <li>Fatin Fatira Binti Abdul Jamil - K
+                `],
+                ['no-img', 'PEMBANTU TADBIR (PERKERANIAN/OPERASI) N22 (TBK1)','Fatimah Binti Ahmad'],
                 ['no-display',"", '', ''],
 
 
