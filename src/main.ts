@@ -153,10 +153,10 @@ class imageAlbum extends HTMLElement {
     connectedCallback() {
 
         let attractions: any[] = [
-            ['src/titi-dua-lapis.jpg', 'Titi Dua Lapis', 'Marvel design of two way river intersection in Kampung Titi Dua Lapis.', 'https://maps.app.goo.gl/C61U3jLt9WtfQF5b9'],
+            ['https://github.com/HaiziIzzudin/localcommunity/blob/main/src/titi-dua-lapis.jpg?raw=true', 'Titi Dua Lapis', 'Marvel design of two way river intersection in Kampung Titi Dua Lapis.', 'https://maps.app.goo.gl/C61U3jLt9WtfQF5b9'],
             ['https://raw.githubusercontent.com/HaiziIzzudin/localcommunity/main/src/telaga.jpg', 'Telaga Gajah', 'Thousand of history of Telaga Gajah in Pendang, Kedah', 'https://maps.app.goo.gl/yodNbX4M4akFDPt8A'],
             ['https://i.ytimg.com/vi/9zB01qk3M-w/maxresdefault.jpg', 'Taman Tasik Pendang', 'Enjoy a refreshing outside in Taman Tasik Pendang','https://maps.app.goo.gl/798c8kJrgxfSESQy5'],
-            ['src/campsite.png','A-Rang Escape & Campsite','Have a challenging life at campsite, located in Kampung Bakar Arang, Pendang.','https://maps.app.goo.gl/oaGgdtvNCDxJCko86'],
+            ['https://github.com/HaiziIzzudin/localcommunity/blob/main/src/campsite.png?raw=true','A-Rang Escape & Campsite','Have a challenging life at campsite, located in Kampung Bakar Arang, Pendang.','https://maps.app.goo.gl/oaGgdtvNCDxJCko86'],
             ['https://raw.githubusercontent.com/HaiziIzzudin/localcommunity/main/src/lake.jpg',   'Kedai 2', 'Description kedai 2'],
             ['https://raw.githubusercontent.com/HaiziIzzudin/localcommunity/main/src/telaga.jpg', 'Kedai 3', 'Description kedai 3'],
         ];
