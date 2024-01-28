@@ -153,10 +153,10 @@ class imageAlbum extends HTMLElement {
     connectedCallback() {
 
         let attractions: any[] = [
-            ['https://raw.githubusercontent.com/HaiziIzzudin/localcommunity/main/src/padi.jpg',   'Kedai 1', 'Description kedai 1'],
-            ['https://raw.githubusercontent.com/HaiziIzzudin/localcommunity/main/src/lake.jpg',   'Kedai 2', 'Description kedai 2'],
-            ['https://raw.githubusercontent.com/HaiziIzzudin/localcommunity/main/src/telaga.jpg', 'Kedai 3', 'Description kedai 3'],
-            ['https://raw.githubusercontent.com/HaiziIzzudin/localcommunity/main/src/padi.jpg',   'Kedai 1', 'Description kedai 1'],
+            ['src/titi-dua-lapis.jpg', 'Titi Dua Lapis', 'Marvel design of two way river intersection in Kampung Titi Dua Lapis.', 'https://maps.app.goo.gl/C61U3jLt9WtfQF5b9'],
+            ['https://raw.githubusercontent.com/HaiziIzzudin/localcommunity/main/src/telaga.jpg', 'Telaga Gajah', 'Thousand of history of Telaga Gajah in Pendang, Kedah', 'https://maps.app.goo.gl/yodNbX4M4akFDPt8A'],
+            ['https://i.ytimg.com/vi/9zB01qk3M-w/maxresdefault.jpg', 'Taman Tasik Pendang', 'Enjoy a refreshing outside in Taman Tasik Pendang','https://maps.app.goo.gl/798c8kJrgxfSESQy5'],
+            ['src/campsite.png','A-Rang Escape & Campsite','Have a challenging life at campsite, located in Kampung Bakar Arang, Pendang.','https://maps.app.goo.gl/oaGgdtvNCDxJCko86'],
             ['https://raw.githubusercontent.com/HaiziIzzudin/localcommunity/main/src/lake.jpg',   'Kedai 2', 'Description kedai 2'],
             ['https://raw.githubusercontent.com/HaiziIzzudin/localcommunity/main/src/telaga.jpg', 'Kedai 3', 'Description kedai 3'],
         ];
@@ -164,10 +164,17 @@ class imageAlbum extends HTMLElement {
         let starsHTML = '';
         
         for (let i = 0; i < attractions.length; i++) {
-            starsHTML += '<div class="attractions-images img'+ (i+1) +'">';
-            starsHTML += '<p>'+ attractions[i][2] +'</p>';
-            starsHTML += '<h5>'+ attractions[i][1] +'</h5>';
-            starsHTML += '<div class="gradient-overlay"></div></div>';
+            starsHTML += `
+            <div class="attractions-images img`+ (i+1) +`">
+                <button onclick="window.open('`+ attractions[i][3] +`', '_blank')";>
+                Open in Google Maps
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </button>
+                <p>`+ attractions[i][2] +`</p>
+                <h5>`+ attractions[i][1] +`</h5>
+
+                <div class="gradient-overlay"></div>
+            </div>`;
 
             starsHTML += '<style>';
             starsHTML += '.img'+ (i+1) +'{';
@@ -511,12 +518,6 @@ class adminCharts extends HTMLElement {
                 ['no-display',"", '', ''], //34
                 ['no-img'    ,"NORHIDAYAH BINTI MD DESA", 'Pembantu Tadbir (Perkeranian/ Operasi) N19'],
                 ['no-display',"", '', ''],
-
-
-                
-
-
-
             ];
         }
         
@@ -596,7 +597,7 @@ $('a[href*="#"], button[onclick^="window.location.href = \'#backtotop\'"]').on('
     }
     if (href) {
         $('html, body').animate({
-            scrollTop: $(href).offset()!.top - 95, // Offset value
+            scrollTop: $(href).offset()!.top - 100, // Offset value
         }, 500, 'linear');
     }
 });
