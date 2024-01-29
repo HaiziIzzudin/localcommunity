@@ -117,6 +117,10 @@ $breakpoint-tablet: 850px;
 
 
 
+
+
+
+
 // MASTER PRESETS
 * {
   margin: 0; padding: 0;
@@ -134,7 +138,7 @@ a {
   justify-content: space-between;
   align-items: center;
 }
-.fa-solid {
+.fa-solid, .fa-brands {
   margin-left: 5px;
 }
 #mainContent {
@@ -149,6 +153,7 @@ a {
   
   margin-right: 30px;
 }
+
 
 
 
@@ -216,22 +221,24 @@ button {
   border-radius: 100px;
 
   padding: 5px 15px;
-
-  transition-duration: 0.1s;
-
+  
   cursor: pointer;
   opacity: 0;
-
+  
   border: 1px solid white;
   background-color: #00000000;
+
+  &:hover {
+    transition-duration: 0.1s;
+    box-shadow: 0 0 10px 0 whitesmoke;
+    transform: scale(100%, 100%);
+  }
+  &:active {
+    transform: scale(98%, 98%);
+  }
 }
 
-button:hover {
-  box-shadow: 0 0 10px 0 whitesmoke;
-}
-button:active {
-  transform: scale(98%, 98%);
-}
+
 ul, ol {
   li {
     color: var(--text-color);
@@ -401,19 +408,20 @@ nav {
 
 .gradient-cover {
   position: absolute;
-  width: auto;
-
+  
+  min-width: calc(100% - 20px - 500px);
   min-height: calc(100% - 120px);
   z-index: 1;
   
   padding: 100px 20px 20px 500px;
   
   background: var(--gradient-cover);
-  
-  * { opacity: 0; }
+
   h3, h4 { 
     animation: var(--anim-preset-upIn) .0s; 
     color: white;
+    
+    opacity: 0;
   }
   p { 
     animation: var(--anim-preset-upIn) .5s; 
@@ -717,6 +725,69 @@ section {
     color: var(--text-color);
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// CONTACTS STYLING
+
+@for $i from 1 through 11 {
+  .gradient-cover .input-#{$i} {
+    opacity: 0;
+    animation: var(--anim-preset-blurIn) #{$i * 0.15}s;
+  }
+}
+form {
+  input {
+    display: block;
+    margin: 15px 0;
+    padding: 5px 10px;
+    border-radius: var(--rounded-corners-n-blur);
+
+    font-size: 15px;
+    font-family: var(--font-paragraph);
+
+    width: calc(100% - 20px);
+
+    color: white;
+    background-color: var(--accent-transparent);
+    border: 1px solid white;
+  }
+  .input-3 {
+    height: 200px;
+  }
+}
+.gradient-cover button {
+  color: white;
+  font-size: 15px;
+
+  margin: 0 2px 10px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

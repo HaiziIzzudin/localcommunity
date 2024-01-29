@@ -157,8 +157,10 @@ class imageAlbum extends HTMLElement {
             ['https://raw.githubusercontent.com/HaiziIzzudin/localcommunity/main/src/telaga.jpg', 'Telaga Gajah', 'Thousand of history of Telaga Gajah in Pendang, Kedah', 'https://maps.app.goo.gl/yodNbX4M4akFDPt8A'],
             ['https://i.ytimg.com/vi/9zB01qk3M-w/maxresdefault.jpg', 'Taman Tasik Pendang', 'Enjoy a refreshing outside in Taman Tasik Pendang','https://maps.app.goo.gl/798c8kJrgxfSESQy5'],
             ['https://github.com/HaiziIzzudin/localcommunity/blob/main/src/campsite.png?raw=true','A-Rang Escape & Campsite','Have a challenging life at campsite, located in Kampung Bakar Arang, Pendang.','https://maps.app.goo.gl/oaGgdtvNCDxJCko86'],
-            ['https://raw.githubusercontent.com/HaiziIzzudin/localcommunity/main/src/lake.jpg',   'Kedai 2', 'Description kedai 2'],
-            ['https://raw.githubusercontent.com/HaiziIzzudin/localcommunity/main/src/telaga.jpg', 'Kedai 3', 'Description kedai 3'],
+            ['https://scontent.fkul8-2.fna.fbcdn.net/v/t39.30808-6/370293313_134975109678506_8256356352306496179_n.jpg?stp=cp6_dst-jpg&_nc_cat=106&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=hqW0NwAX2wwAX_HQN2y&_nc_ht=scontent.fkul8-2.fna&oh=00_AfBKvEeZuIrp7h6zEEFYYSTc2g3w797wVurswdCd06F3Wg&oe=65BCABA1','Jasnyta Cabin','Accommodation with a peaceful atmosphere, swimming pool and enjoy the view of the sunset','https://maps.app.goo.gl/UeLm6cJyUqScu7xq9'],
+            ['https://scontent.fkul8-3.fna.fbcdn.net/v/t39.30808-6/356649436_702581995006887_7101758810158512053_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=783fdb&_nc_ohc=twgyLLU_RFIAX-RLjv7&_nc_ht=scontent.fkul8-3.fna&oh=00_AfDYzeov70E8JFKA-TbDAEWZjsLXqBnbskyeU4PgawVelg&oe=65BB5F7C', 'Kampung Adat Melayu Seri Banian','Village taste in the past','https://maps.app.goo.gl/RA98Tp6sfPvKTYgh7'],
+            ['https://scontent.fkul8-4.fna.fbcdn.net/v/t39.30808-6/271602516_930848297560420_4299152462043121489_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=dd5e9f&_nc_ohc=N1HnwlQXmVsAX-2tOy3&_nc_ht=scontent.fkul8-4.fna&oh=00_AfBH-wG4p8h-jSEWqCou5DTygODHKwEth393OHta8vUWug&oe=65BB4AD6', 'Man Bai Ikan Bakar','There is a variety of grilled fish, grilled meat and village-style dishes.','https://maps.app.goo.gl/nKrsUcqhZ21p7DUJ9'],
+            ['https://pendanglakeresort.com.my/wp-content/uploads/2022/03/photo_2022-03-23_12-44-50-768x576.jpg', 'Pendang Lake Resort', 'A Countryside Resort Surrounded by Peaceful Lake with Panoramic View','https://maps.app.goo.gl/EUEbfgCztQpS88Nm8'],
         ];
         
         let starsHTML = '';
