@@ -14,8 +14,12 @@ export default defineConfig({
                 staff: fileURLToPath(new URL('ahli-majlis.html', import.meta.url)),
                 contacts: fileURLToPath(new URL('contacts.html', import.meta.url)),
                 newsroom: fileURLToPath(new URL('newsroom.html', import.meta.url)),
-                cname: fileURLToPath(new URL('CNAME', import.meta.url)),
             },
         },
+        // assetsInclude: ['CNAME'],
     },
 });
+
+
+// git push git@github.com:HaiziIzzudin/localcommunity.git --delete gh-pages
+// npm run build && cp CNAME -Destination ./dist && git add dist -f && git commit -m "MASUKKAN_NOMBOR_VERSI" && git subtree push --prefix dist origin gh-pages;
