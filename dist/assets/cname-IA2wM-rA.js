@@ -1,1 +1,0 @@
-pendang.iziizz.com;
