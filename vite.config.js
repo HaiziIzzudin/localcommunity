@@ -14,6 +14,7 @@ export default defineConfig({
                 staff: fileURLToPath(new URL('ahli-majlis.html', import.meta.url)),
                 contacts: fileURLToPath(new URL('contacts.html', import.meta.url)),
                 newsroom: fileURLToPath(new URL('newsroom.html', import.meta.url)),
+                cname: fileURLToPath(new URL('CNAME', import.meta.url)),
             },
         },
     },
