@@ -1,10 +1,7 @@
 import "./style.scss"; 
 import $ from 'jquery';
 
-
-
 // THE CONTENT OF NAVBAR
-
 class customHeader extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
@@ -43,15 +40,7 @@ class customHeader extends HTMLElement {
         `
     }
 }
-
 customElements.define ('custom-header', customHeader)
-
-
-
-
-
-
-
 
 // DROPDOWN CONFIGURATIONS
 let dropdownButton = document.querySelector('.dropdown-button');
@@ -67,12 +56,6 @@ dropdownButton?.addEventListener('click', () => {
     }
 });
 
-
-
-
-
-
-
 let menuBtn = document.querySelector('.fa-bars') as HTMLElement;
 let navExpand = document.querySelector('nav');
 
@@ -84,14 +67,6 @@ menuBtn?.addEventListener('click', () => {
         navExpand?.classList.add('show');
     }
 });
-
-
-
-
-
-
-
-
 
 let tocBtn = document.querySelector('.toc') as HTMLElement;
 let tocExpand = document.querySelector('.sidenav');
@@ -105,20 +80,7 @@ tocBtn?.addEventListener('click', () => {
     }
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
 // DETECT DARK OR LIGHT MODE
-
 let theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
 console.log(theme);
 if (theme == 'dark') {
@@ -127,28 +89,13 @@ if (theme == 'dark') {
     document.querySelector('body')?.classList.add('light-theme');
 }
 
-
-
-
-
-
-
-
-
 // ELIMINATING FOUC
-
 $( document ).ready(function() {
     console.log( "ready!" );
     document.body.style.visibility = 'visible';
 });
 
-
-
-
-
-
 // FOR ATTRACTIONS PAGE
-
 class imageAlbum extends HTMLElement {
     connectedCallback() {
 
@@ -190,33 +137,7 @@ class imageAlbum extends HTMLElement {
         
     }
 }
-
-
 customElements.define ('image-album', imageAlbum);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 class adminCharts extends HTMLElement {
     connectedCallback() {
@@ -571,24 +492,9 @@ class adminCharts extends HTMLElement {
         this.innerHTML = starsHTML;
     }
 }
-
-
 customElements.define ('admin-charts', adminCharts);
 
-
-
-
-
-
-
-
-
-
-
-
-
 // SMOOTH SCROLLING OFFSET
-
 $('a[href*="#"], button[onclick^="window.location.href = \'#backtotop\'"]').on('click', function(e) {
     e.preventDefault();
     let href;
@@ -604,17 +510,8 @@ $('a[href*="#"], button[onclick^="window.location.href = \'#backtotop\'"]').on('
     }
 });
 
-
-
-
-
-
-
-
 // NEWSROOM: SHOW SIDENAV IF MEDIAQUERY IS ABOVE BREAKPOINT TABLET
-
 let sidenav = document.querySelector('.sidenav');
-
 
 // FUNCTION DEFINITION SIDENAV
 function sidenavClass() {
@@ -649,7 +546,6 @@ function sidenavClass() {
     });
 
 }
-
 
 window.addEventListener('resize', sidenavClass);
 sidenavClass();

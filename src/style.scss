@@ -1,14 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Aref+Ruqaa|Lexend');
 
-
-
 // SCSS Var
 $breakpoint-tablet: 850px;
-
-
-
-
-
 
 :root {
   --font-title: 'Lexend', sans-serif;
@@ -100,27 +93,6 @@ $breakpoint-tablet: 850px;
   --anim-preset-rightOut: rightOut .5s cubic-bezier(0, 1, 0, 1) forwards;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // MASTER PRESETS
 * {
   margin: 0; padding: 0;
@@ -153,32 +125,6 @@ a {
   
   margin-right: 30px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 body {
   font-family: var(--font-paragraph);
@@ -237,36 +183,12 @@ button {
     transform: scale(98%, 98%);
   }
 }
-
-
 ul, ol {
   li {
     color: var(--text-color);
     margin-left: 30px;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // HEADER & NAV STYLING
 header {
@@ -310,18 +232,11 @@ header {
     margin: 10px;
   }
 }
-
 nav {
   margin-right: 10px;
-
 }
 
-
-
-
-
 // DROPDOWN CONTENT (HIDDEN BY DEFAULT)
-
 .dropdown-content {
   position: absolute;
 
@@ -350,14 +265,6 @@ nav {
   margin-top: 15px;
 }
 
-
-
-
-
-
-
-
-
 // INDEX STYLING
 .body-index {
   background-image: url(./padi.jpg);
@@ -368,8 +275,6 @@ nav {
 .body-index header {
   background-color: var(--accent-transparent);
 }
-
-
 .solid-cover {
   position: absolute;
   width: 100%; height: 100%;
@@ -403,9 +308,6 @@ nav {
     }
   }
 }
-
-
-
 .gradient-cover {
   position: absolute;
   
@@ -428,13 +330,6 @@ nav {
     color: white;
   }
 }
-
-
-
-
-
-
-
 
 // ABOUT STYLING
 .body-about {
@@ -460,17 +355,6 @@ nav {
   h3, h4 { animation: var(--anim-preset-leftIn); }
   p { animation: var(--anim-preset-leftIn) .5s; }
 }
-
-
-
-
-
-
-
-
-
-
-
 
 // ATTRACTIONS STYLING
 .body-attractions {
@@ -540,22 +424,7 @@ nav {
   border-radius: calc(var(--rounded-corners-n-blur) * 1.5);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // ADMINISTRATION STYLING
-
 .admin {
   
   opacity: 0;
@@ -599,27 +468,7 @@ food-album, admin-charts {
   gap: 20px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // NEWSROOM STYLING
-
 html {
   scroll-behavior: smooth;
 }
@@ -649,16 +498,12 @@ html {
   }
   
 }
-
 .sidenav-show {
   animation: var(--anim-preset-rightIn) .0s;
 }
 .sidenav-hide {
   animation: var(--anim-preset-rightOut) .0s;
 }
-
-
-
 section {
   
   
@@ -726,24 +571,7 @@ section {
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // CONTACTS STYLING
-
 @for $i from 1 through 11 {
   .gradient-cover .input-#{$i} {
     opacity: 0;
@@ -777,36 +605,7 @@ form {
   margin: 0 2px 10px 0;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // MEDIA QUERIES
-
-
 @media (max-width: $breakpoint-tablet) {
   
   .sidenav {
@@ -921,12 +720,6 @@ form {
     }
   }
 }
-
-
-
-
-
-
 
 @keyframes leftIn {
   0% {
